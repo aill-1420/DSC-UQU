@@ -1493,47 +1493,32 @@ footer  {
 	    padding-left: 5px;
 	}
 
-	.home_version_02 .register-area {
-	    background: transparent url("../images/index-02/register-bg.jpg") no-repeat center center/cover;
-	    min-height: 500px;
-	    position: relative;
-	    padding: 100px 0;
 	}
-	.home_version_02 .register-area:before {
-	    background: rgba(0, 0, 0, 0.5);
-	    content: "";
-	    height: 100%;
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    width: 100%;
-	    z-index: 0;
-	}
-	.home_version_02 .register-area .form-full-box {
+	.home_version_02 .form-full-box {
 	    background: #ffffff;
 	    margin: 0 60px 0 15px;
 	}
-	.home_version_02 .register-area .form-full-box .header-box-top {
+	.home_version_02 .form-full-box {
 	    text-align: center;
 	    padding: 45px 25px;
 	}
-	.home_version_02 .register-area .form-full-box .header-box-top .section-header-box {
+	.home_version_02  .form-full-box  .section-header-box {
 	    margin-bottom: 35px;
 	}
-	.home_version_02 .register-area .form-full-box .header-box-top .section-header-box .section-header h2 {
+	.home_version_02  .form-full-box  .section-header-box .section-header h2 {
 	    font-size: 30px;
 	    padding-bottom: 0;
 	}
-	.home_version_02 .register-area .form-full-box .header-box-top p {
+	.home_version_02 .form-full-box  p {
 	    margin: 0;
 	}
-	.home_version_02 .register-area .form-full-box .register-form {
+	.home_version_02  .form-full-box .register-form {
 	    padding: 0 50px 35px;
 	}
-	.home_version_02 .register-area .form-full-box .register-form .form-group {
+	.home_version_02  .form-full-box .register-form .form-group {
 	    margin-bottom: 15px;
 	}
-	.home_version_02 .register-area .form-full-box .register-form .form-group input {
+	.home_version_02  .form-full-box .register-form .form-group input {
 	    background: transparent;
 	    border-color: #bababa;
 	    border-radius: 0px;
@@ -1563,24 +1548,24 @@ footer  {
 	    font-family: "Open Sans", sans-serif;
 	    font-weight: 600;
 	}
-	.home_version_02 .register-area .form-full-box .register-form .register-btn-box .register-btn:hover {
+	.home_version_02  .form-full-box .register-form .register-btn-box .register-btn:hover {
 	    background: #232323;
 	    color: #fff;
 	}
-	.home_version_02 .register-area .form-content {
+	.home_version_02 .form-content {
 	    margin-top: 150px;
 	    padding-left: 55px;
 	}
-	.home_version_02 .register-area .form-content .section-header:before {
+	.home_version_02  .form-content .section-header:before {
 	    border-bottom: 1px solid #ffffff;
 	}
-	.home_version_02 .register-area .form-content .section-header h2 {
+	.home_version_02  .form-content .section-header h2 {
 	    color: #ffffff;
 	    text-transform: none;
 	    font-size: 40px;
 	    padding-bottom: 0;
 	}
-	.home_version_02 .register-area .form-content p {
+	.home_version_02 .form-content p {
 	    color: #fff;
 	    margin: 0;
 	}
@@ -7450,7 +7435,7 @@ footer  {
 	.event-details-1 .event-details .post_left-side .leave-comment-box .comment-respond textarea:focus {
 	    border: 1px solid #fec722;
 	}
-	.event-details-1 .event-details .post_left-side .leave-comment-box .comment-respond input[type="submit"] {
+	.event-details-1 .event-details .post_left-side .leave-comment-box .comment-respond input[type="button"] {
 	    background: #fec722;
 	    border-radius: 0;
 	    color: #fff;

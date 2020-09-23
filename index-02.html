@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" dir='rtl'>
+<html class="no-js" lang="en">
 <head>
     <meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -26,7 +26,17 @@
 	<link rel="stylesheet" href="css/assets/meanmenu.css">	
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsive.css">	
+	<link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+    
+.modal-notify .modal-header {
+    border-radius: 3px 3px 0 0;
+}
+.modal-notify .modal-content {
+    border-radius: 3px;
+}
+    </style> 
 </head>
 <body class="home_version_03 home_version_02 home_version_04">
 <!-- Preloader -->
@@ -59,7 +69,7 @@
 						
 						<li><a data-scroll href="blog.html">المقالات</a>
 						</li>
-                        <li><a data-scroll href="event-list.html">تسجيل/دخول</a>
+                      <li><a data-scroll href="blog.html">تسجيل/دخول</a>
 							<!-- dropdwon start -->
                             <ul class="dropdown list-unstyled">
                                 <li><a href="event-list.html">صفحتي الشخصية</a></li>
@@ -68,7 +78,7 @@
                             </ul>
                             <!-- dropdown end -->
 						</li>
-                            <!-- dropdown end -->
+                         
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->
@@ -79,15 +89,7 @@
 			<div class="row">
 				<div class="col-md-10 col-sm-offset-1">
 					<div class="intro-text  wow slideInUp" data-wow-duration="1.5s" data-wow-delay=".2s">
-                
-						<h1>Education A Global Community</h1>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscingl elit sed diam nonumm nibhy euismod<br> tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 						<a href="#." class="el-btn-regular slider-btn-left">Get Started now</a> <a href="#." class="el-btn-regular">View Courses</a>
-					</div>
-				</div>
-				<div class="col-sm-12 text-center">
-					<div class="mouse-icon-box">
-						<a href="#" class="mouse-icon"></a>
 					</div>
 				</div>
 			</div><!-- /.row -->
@@ -95,6 +97,50 @@
 	</div>
 </header>
 	<!--  End header section-->
+    <!-- Teachers Area section -->
+ <section class="register-area">
+ <div class="modal fade" id="orangeModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header text-center">
+        <h4 class="modal-title white-text w-100 font-weight-bold py-2">Subscribe</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form3" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form3">Your name</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="form2" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form2">Your email</label>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <a type="button" class="btn btn-outline-warning waves-effect">Send <i class="fas fa-paper-plane-o ml-1"></i></a>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+
+<div class="text-center">
+  <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#orangeModalSubscription">Launch
+    modal Subscription</a>
+</div>  
+    </section>
 
 <!-- Start Welcome Area section -->
 <section class="Welcome-area">
@@ -373,15 +419,16 @@
 	<script type="text/javascript" src="js/assets/revolution/revolution.js"></script>
 	<!-- Custom JS -->
 	<script src="js/custom.js"></script>
-    <script>
+
+   <script>
 // Get the modal
 var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 </script>
 

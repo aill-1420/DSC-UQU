@@ -327,5 +327,57 @@
 	<script src="js/assets/jquery.meanmenu.min.js"></script>
 	<!-- Custom JS -->
 	<script src="js/custom.js"></script>
+    <script>
+    mobiscroll.settings = {
+    theme: 'ios',
+    themeVariant: 'light'
+};
+
+var list = mobiscroll.popup('#list', {
+        buttons: [],
+        display: 'bottom',
+        cssClass: 'mbsc-no-padding'
+    }),
+    grid = mobiscroll.popup('#grid', {
+        buttons: [],
+        display: 'bottom',
+        cssClass: 'mbsc-no-padding'
+    });
+
+mobiscroll.listview('#demo-lv', {
+    enhance: true,
+    swipe: false,
+    onItemTap: function (event, inst) {
+        list.hide();
+        mobiscroll.toast({
+            message: event.target.textContent + ' clicked'
+        });
+    }
+});
+
+mobiscroll.optionlist('#demo-ol', {
+    type: 'menu',
+    select: 'single',
+    snap: true,
+    itemWidth: 80,
+    display: 'inline',
+    cssClass: 'md-bottom-grid',
+    onItemTap: function (event, inst) {
+        grid.hide();
+        mobiscroll.toast({
+            message: event.target.textContent + ' clicked'
+        });
+    }
+});
+
+document
+    .getElementById('login-area')
+    .addEventListener('click', function () {
+        list.show();
+    }, false);
+
+
+    
+    </script>
 </body>
 </html>
