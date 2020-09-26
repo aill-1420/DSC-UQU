@@ -33,7 +33,9 @@
     .radioLeft {
 margin-bottom: -10px;
 }
-       
+        .glyphicon glyphicon-user{
+            margin-left: 50px;
+        } 
 
 
     </style>
@@ -94,24 +96,34 @@ margin-bottom: -10px;
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3">
 				<form action="" class="learnpro-register-form text-center">
-				 <h1 style="color: #fec722;" class="text-primary"><span class="glyphicon glyphicon-user" style=""></span>Edit Profile</h1>					
-					<div class="form-group"> 
-                       <label class="col-lg-3 control-label">name:</label>
-					  	<input class="required form-control" placeholder="full name" name="full_name" type="text">
-					</div>
-                     <label class="col-lg-3 control-label">email:</label>
-                    <div class="form-group">
-					 	<input class="required form-control" placeholder="Email" name="Email"type="email">
-					</div>
-                    <div class="form-group">
-                          <label class="col-lg-3 control-label">password:</label>
-					  	<input class="required form-control" placeholder="Password " name="password" type="password">
-					</div>
-             <div class="form-group">
-            <label class="col-lg-3 control-label">sex:</label>
-           <input class="radio-inline" type=radio name="sex" value="male">Male <br>
-           <input clasee ="radio-inline" type="radio" name="sex" value="female">Female       
+				 <h1 style="color: #fec722;" class="text-primary"><span   class="glyphicon glyphicon-user" style=""></span> Edit Profile</h1>					
+					<div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon" style="background:#fec722;"><i class="fa fa-user"  style="color:#000000;"></i></span>
+             <input type="text" class="form-control" name="username" placeholder="الإسم" required="required">
            </div>
+         </div>
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon" style="background:#fec722;"><i class="fa fa-envelope"style="color: #000000;"></i></span>
+             <input type="email" class="form-control" name="email" placeholder="البريد الالكتروني" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon" style="background:#fec722;"><i class="fa fa-lock"style="color: #000000;"></i></span>
+             <input type="password" class="form-control" name="password" placeholder="كلمة المرور" required="required">
+           </div>
+         </div>
+           <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon " style="background:#fec722;" ><i class="fa fa-venus-mars  " aria-hidden="true" style="color: #000000;"></i></span>
+               <select class="form-control">
+                <option value="0">Male</option>
+                   <option value="1">Female</option>
+               </select>
+           </div>
+           </div>      
             <br> <br> <br>
        	<div class="form-group register-btn">
     	<submit class="btn btn-primary btn-lg">save</submit>

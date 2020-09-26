@@ -10,6 +10,7 @@
 	<link rel="shortcut icon" href="images/dsc-logo.png" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/assets/bootstrap.min.css">
+   
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/assets/font-awesome.min.css">
     <!-- Google Fonts -->
@@ -69,16 +70,18 @@
 						
 						<li><a data-scroll href="blog.html">المقالات</a>
 						</li>
-                      <li><a data-scroll href="blog.html">تسجيل/دخول</a>
-							<!-- dropdwon start -->
+                      <li>
+
+                    <a class="nav-link text-white" href="#mylogin" data-toggle="modal">دخول</a>
+							/*<!-- dropdwon start -->
                             <ul class="dropdown list-unstyled">
-                                <li><a href="event-list.html">صفحتي الشخصية</a></li>
+                                <li><a href="profile.html">صفحتي الشخصية</a></li>
                                 <li><a href="event-list-1.html">جميع الفعاليات</a></li>
-                                <li><a href="event-grid-2.html">خروج</a></li>
-                            </ul>
+                                <li><a href="#">خروج</a></li>
+                            </ul>*/
                             <!-- dropdown end -->
 						</li>
-                         
+                         <li><a data-scroll href="#contact">اتصل بنا</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container -->
@@ -97,50 +100,172 @@
 	</div>
 </header>
 	<!--  End header section-->
-    <!-- Teachers Area section -->
- <section class="register-area">
- <div class="modal fade" id="orangeModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-warning" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Header-->
-      <div class="modal-header text-center">
-        <h4 class="modal-title white-text w-100 font-weight-bold py-2">Subscribe</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" class="white-text">&times;</span>
-        </button>
-      </div>
-
-      <!--Body-->
-      <div class="modal-body">
-        <div class="md-form mb-5">
-          <i class="fas fa-user prefix grey-text"></i>
-          <input type="text" id="form3" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form3">Your name</label>
-        </div>
-
-        <div class="md-form">
-          <i class="fas fa-envelope prefix grey-text"></i>
-          <input type="email" id="form2" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="form2">Your email</label>
-        </div>
-      </div>
-
-      <!--Footer-->
-      <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-outline-warning waves-effect">Send <i class="fas fa-paper-plane-o ml-1"></i></a>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
+ <!-- login -->
+<div id="mylogin" class="modal fade">
+ <div class="modal-dialog modal-login">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h4 class="modal-title">تسجيل دخول</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+     </div>
+     <div class="modal-body">
+       <form action="/examples/actions/confirmation.php" method="post">
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+             <input type="email" class="form-control" name="email" placeholder="البريد الالكتروني" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+             <input type="password" class="form-control" name="password" placeholder="كلمة المرور" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <button type="submit" class="btn  btn-block btn-lg">دخول</button>
+         </div>
+         <p class="hint-text"><strong><a href="#">نسيت كلمة المرور؟</a></strong></p>
+       </form>
+     </div>
+     <div class="modal-footer">  ليس لديك حساب؟ <a href="#mysingUp" data-dismiss="modal" data-toggle="modal">  سجل </a></div>
+   </div>
+ </div>
 </div>
+<!-- end -->
+<!-- singUp -->
+<div id="mysingUp" class="modal fade">
+ <div class="modal-dialog modal-login">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h4 class="modal-title">تسجيل جديد</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+     </div>
+     <div class="modal-body">
+       <form action="/examples/actions/confirmation.php" method="post">
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-user"></i></span>
+             <input type="text" class="form-control" name="username" placeholder="الإسم" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+             <input type="email" class="form-control" name="email" placeholder="البريد الالكتروني" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+             <input type="password" class="form-control" name="password" placeholder="كلمة المرور" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+             <input type="password" class="form-control" name="password" placeholder="تأكيد كلمة المرور" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <button type="submit" class="btn btn-block btn-lg">تسجيل</button>
+         </div>
+       </form>
+     </div>
+     <div class="modal-footer"> لديك حساب مسبقاً<a href="#mylogin" data-dismiss="modal" data-toggle="modal"> سجل دخول </a></div>
+   </div>
+ </div>
+</div>
+<!-- end -->
+    /*<!-- login -->
+<div id="mylogin" class="modal fade">
+ <div class="modal-dialog modal-login">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h4 class="modal-title">تسجيل دخول</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+     </div>
+     <div class="modal-body">
+       <form action="/examples/actions/confirmation.php" method="post">
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+             <input type="email" class="form-control" name="email" placeholder="البريد الالكتروني" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+             <input type="password" class="form-control" name="password" placeholder="كلمة المرور" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <button type="submit" class="btn btn-outline-primary  btn-block btn-lg">دخول</button>
+         </div>
+         <p class="hint-text"><strong><a href="#mypass" data-dismiss="modal" data-toggle="modal">نسيت كلمة المرور؟</a></strong></p>
+       </form>
+     </div>
+     <div class="modal-footer">  ليس لديك حساب؟ <a href="#mysingUp" data-dismiss="modal" data-toggle="modal">  سجل </a></div>
+   </div>
+ </div>
+</div>
+<!-- end -->
+<!-- singUp -->
+<div id="mysingUp" class="modal fade">
+ <div class="modal-dialog modal-login">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h4 class="modal-title">تسجيل جديد</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+     </div>
+     <div class="modal-body">
+       <form action="/examples/actions/confirmation.php" method="post">
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-user"></i></span>
+             <input type="text" class="form-control" name="username" placeholder="الإسم" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+             <input type="email" class="form-control" name="email" placeholder="البريد الالكتروني" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+             <input type="password" class="form-control" name="password" placeholder="كلمة المرور" required="required">
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+             <input type="password" class="form-control" name="password" placeholder="تأكيد كلمة المرور" required="required">
+           </div>
+         </div>
+           <div class="form-group">
+           <div class="input-group">
+             <span class="input-group-addon"><i class="fa fa-venus-mars" aria-hidden="true"></i>
+             </span>
+               <select class="form-control">
+                <option value="0">Male</option>
+                   <option value="1">Female</option>
+               </select>
+           </div>
+           </div>      
+         <div class="form-group">
+           <button type="submit" class="btn btn-block btn-lg">تسجيل</button>
+         </div>
+       </form>
+     </div>
+     <div class="modal-footer"> لديك حساب مسبقاً<a href="#mylogin" data-dismiss="modal" data-toggle="modal"> سجل دخول </a></div>
+   </div>
+ </div>
+</div>
+<!-- end -->
+    */
 
-<div class="text-center">
-  <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#orangeModalSubscription">Launch
-    modal Subscription</a>
-</div>  
-    </section>
 
 <!-- Start Welcome Area section -->
 <section class="Welcome-area">
@@ -291,7 +416,7 @@
 			</div>
 
 			<div class="video-content">
-				<h2>Take a Tour EduRead Campus</h2>
+			<!--	<h2>Take a Tour EduRead Campus</h2> -->
 			</div><!-- ends: .section-header -->				
 		</div>
 	</div>
@@ -327,7 +452,7 @@
 
 <!-- Footer Area section -->
 <footer>
-	<div  class="container ">
+	<div  class="container " id="contact">
 		<div class="row">
 			<div  class=" col-sm-12 footer-content-box ">
 				<div class="col-sm-3" >
@@ -346,13 +471,18 @@
 
 					<form action="#">
 						<div class="form-group" >
-							<input placeholder="Your Email" type="email" required="" >
+							  <input type="email"  id="exampleInputEmail1" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                     <textarea  class="form-control" id="inputMessage" placeholder="Enter message"></textarea>
+                    </div>
+                          <div class="form-group">
 							<div class="submit-btn">
 								<div class="submit-btn">
 									<button type="submit" class="text-center">Subscribe</button>
 								</div>
 							</div>
-						</div>
+                        </div>
 					</form>
 				</div>
 			</div>
@@ -419,6 +549,7 @@
 	<script type="text/javascript" src="js/assets/revolution/revolution.js"></script>
 	<!-- Custom JS -->
 	<script src="js/custom.js"></script>
+    
 
    <script>
 // Get the modal
@@ -431,6 +562,16 @@ window.onclick = function(event) {
   }
 }
 </script>
+    <script>
+    $('a[href*="#"]').click(function(){
+    $('html, body').animate({
+        // height 60px + 15px for margin
+        scrollTop: $( $(this).attr('href') ).offset().top - 100
+    }, 500);
+    return false;
+});
+    
+    </script>
 
 </body >
 </html>

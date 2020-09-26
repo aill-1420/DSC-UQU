@@ -433,11 +433,12 @@ our-team .picture::after {
     $(document).ready(function() {
     $('#join').on('click', function()){
     let button = $(this.).val();
+        
     $.ajax({
         url : '',
         method: 'post',
         data: {
-           
+           username : name
         },
         success: function(status){
          if(status==200){

@@ -1336,10 +1336,11 @@ footer  {
 	    margin-bottom: 15px;
 	    outline: none;
 	}
+ 
 	footer .footer-content-box form .form-group input:focus {
 	    outline: none;
 	}
-	footer .footer-content-box form .form-group input::-moz-placeholder {
+	footer .footer-content-box form .form-group input textarea::-moz-placeholder {
 	    color: #a0a0a0;
 	    font-size: 13px;
 	}
